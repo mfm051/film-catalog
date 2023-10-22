@@ -40,4 +40,10 @@ class MoviesController < ApplicationController
 
     redirect_to :root
   end
+
+  def destroy
+    Movie.destroy(params[:id])
+
+    redirect_to :root
+  end
 end
