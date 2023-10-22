@@ -3,9 +3,10 @@
 <h2>Filmes</h2>
 <ul>
     <% @movies.each do |movie| %>
-        <li> <%=movie.title%>( <%= movie.year %>=> ) </li>
+        <li> <%=movie.title%> (<%= movie.year %>) </li>
     <% end %>
 </ul>
+<%= link_to "Cadastrar novo filme", new_movie_path %>
 
 <h2>Diretores</h2>
 <ul>
