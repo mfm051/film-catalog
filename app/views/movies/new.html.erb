@@ -11,6 +11,9 @@
     <%= f.label 'País de origem' %>
     <%= f.text_field :country %> <br>
 
+    <%= f.label 'Duração (min)' %>
+    <%= f.number_field :duration %> <br>
+
     <%= f.label 'Dirigido por' %>
     <%= f.collection_select :director_id, Director.all, :id, :name %> <br>
 

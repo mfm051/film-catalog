@@ -14,7 +14,9 @@
 <h2>Filmes</h2>
 
 <ul>
-    <% @movies_by_director.each do |movie| %>
-        <li> <%= movie.title%> </li>
+    <% if  @movies_by_director%>
+        <% @movies_by_director.each do |movie| %>
+            <li> <%= movie.title %> </li>
+        <% end %>
     <% end %>
 </ul>
