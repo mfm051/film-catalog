@@ -1,7 +1,9 @@
 <h1><%= @genre.name %></h1>
 
 <ul>
-    <% @movies_with_genre.each do |movie| %>
+    <% if  @movies_with_genre%>
+        <% @movies_with_genre.each do |movie| %>
         <li><%= movie.title %></li>
+        <% end %>
     <% end %>
 </ul>
