@@ -14,4 +14,15 @@ class GenresController < ApplicationController
 
     redirect_to :root
   end
+
+  def edit
+    @genre = Genre.find(params[:id])
+  end
+
+  def update
+    @genre = Genre.find(params[:id])
+    @genre.update(params.require(:genre).permit(:name))
+
+    redirect_to :root
+  end
 end

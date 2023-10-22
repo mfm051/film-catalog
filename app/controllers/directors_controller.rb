@@ -19,4 +19,20 @@ class DirectorsController < ApplicationController
 
     redirect_to :root
   end
+
+  def edit
+    @director = Director.find(params[:id])
+  end
+
+  def update
+    @director = Director.find(params[:id])
+    @director.update(params.require(:director).permit(
+      :name,
+      :nationality,
+      :date_of_birth,
+      :genre_id
+    ))
+
+    redirect_to :root
+  end
 end
