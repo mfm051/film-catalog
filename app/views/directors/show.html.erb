@@ -1,0 +1,20 @@
+<h1><%= @director.name %></h1>
+
+<dl>
+    <dt>Nacionalidade</dt>
+    <dd> <%= @director.nationality %> </dd>
+
+    <dt>Data de nascimento</dt>
+    <dd> <%= @director.date_of_birth %> </dd>
+
+    <dt>Gênero favorito</dt>
+    <dd> <%= @director.genre.name %> </dd>
+</dl>
+
+<h2>Filmes</h2>
+
+<ul>
+    <% @movies_by_director.each do |movie| %>
+        <li> <%= movie.title%> </li>
+    <% end %>
+</ul>
